@@ -1,0 +1,583 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5E5DBED5002B"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5E5DBED5002D"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5E5DBEE3015E"
+		stereotype 	"Actor")
+	    (object UseCase "Upload CCTV Footage"
+		quid       	"5E5DBEE802E0")
+	    (object UseCase "generate Frames"
+		quid       	"5E5DBEF602BA")
+	    (object UseCase "Detect Suspicious Activity"
+		quid       	"5E5DBF1C03AD")
+	    (object Association "$UNNAMED$0"
+		quid       	"5E5DBF2C032B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5E5DBF2D0325"
+			supplier   	"Use Case View::Upload CCTV Footage"
+			quidu      	"5E5DBEE802E0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5E5DBF2D0326"
+			supplier   	"Use Case View::User"
+			quidu      	"5E5DBEE3015E")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5E5DBF2F038C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5E5DBF300285"
+			supplier   	"Use Case View::generate Frames"
+			quidu      	"5E5DBEF602BA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5E5DBF300286"
+			supplier   	"Use Case View::User"
+			quidu      	"5E5DBEE3015E")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5E5DBF32020F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5E5DBF33016D"
+			supplier   	"Use Case View::Detect Suspicious Activity"
+			quidu      	"5E5DBF1C03AD"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5E5DBF33016E"
+			supplier   	"Use Case View::User"
+			quidu      	"5E5DBEE3015E"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5E5DBED500B1"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Upload CCTV Footage" @1
+			location   	(1600, 176)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1600, 314)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Upload CCTV Footage")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBEE802E0"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::generate Frames" @2
+			location   	(1600, 480)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1600, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"generate Frames")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBEF602BA"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::User" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(720, 544)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(720, 704)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBEE3015E"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @4
+			location   	(1084, 389)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E5DBF2C032B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @5
+				Parent_View 	@4
+				location   	(364, -155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF2D0325"
+				client     	@4
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @6
+				Parent_View 	@4
+				location   	(364, -155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF2D0326"
+				client     	@4
+				supplier   	@3
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @7
+			location   	(1132, 510)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E5DBF2F038C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @8
+				Parent_View 	@7
+				location   	(412, -34)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF300285"
+				client     	@7
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @9
+				Parent_View 	@7
+				location   	(412, -34)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF300286"
+				client     	@7
+				supplier   	@3
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Detect Suspicious Activity" @10
+			location   	(1616, 816)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1616, 954)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Detect Suspicious Activity")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBF1C03AD"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$6" @11
+			location   	(1141, 670)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E5DBF32020F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @12
+				Parent_View 	@11
+				location   	(421, 126)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF33016D"
+				client     	@11
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @13
+				Parent_View 	@11
+				location   	(421, 126)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E5DBF33016E"
+				client     	@11
+				supplier   	@3
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5E5DBED5002C"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5E5DBED5002E"
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @14
+		logical_models 	(list unit_reference_list
+		    (object Object "User"
+			quid       	"5E5DBF61013C"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5E5DBF720254"
+				supplier   	"Application"
+				quidu      	"5E5DBF65030E"
+				messages   	(list Messages
+				    (object Message "upload cctv footage"
+					quid       	"5E5DBF720255"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "generate frames"
+					quid       	"5E5DBF8000DD"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "Detect Suspicious Activity"
+					quid       	"5E5DBF8B0204"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Application"
+			quid       	"5E5DBF65030E"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5E5DBED500B9"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@14
+		quid       	"5E5DBF5A01AC"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "User" @15
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBF61013C"
+			width      	300
+			height     	769
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(448, 352)
+			    line_color 	3342489
+			    InterObjView 	@15
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(448, 544)
+			    line_color 	3342489
+			    InterObjView 	@15
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(448, 752)
+			    line_color 	3342489
+			    InterObjView 	@15
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "Application" @19
+			location   	(1776, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1776, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBF65030E"
+			width      	300
+			height     	769
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(1776, 352)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(1776, 544)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @22
+			    location   	(1776, 784)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @23
+			location   	(0, 352)
+			label      	(object SegLabel @24
+			    Parent_View 	@23
+			    location   	(1112, 308)
+			    quidu      	"5E5DBF720255"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	347
+			    justify    	0
+			    label      	"upload cctv footage"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@15
+			supplier   	@19
+			Focus_Src  	@16
+			Focus_Entry 	@20
+			origin     	(464, 352)
+			terminus   	(1760, 352)
+			ordinal    	0)
+		    (object InterMessView "" @25
+			location   	(0, 544)
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(1112, 500)
+			    quidu      	"5E5DBF8000DD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	287
+			    justify    	0
+			    label      	"generate frames"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@15
+			supplier   	@19
+			Focus_Src  	@17
+			Focus_Entry 	@21
+			origin     	(464, 544)
+			terminus   	(1760, 544)
+			ordinal    	1)
+		    (object InterMessView "" @27
+			location   	(0, 784)
+			label      	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(1112, 740)
+			    quidu      	"5E5DBF8B0204"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	469
+			    justify    	0
+			    label      	"Detect Suspicious Activity"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@15
+			supplier   	@19
+			Focus_Src  	@18
+			Focus_Entry 	@22
+			origin     	(464, 784)
+			terminus   	(1760, 784)
+			ordinal    	2)))
+	    (object ObjectDiagram "NewDiagram"
+		mechanism_ref 	@14
+		quid       	"5E5DBFC50013"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "User" @29
+			location   	(736, 448)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@29
+			    location   	(655, 397)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBF61013C"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Application" @30
+			location   	(2240, 448)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@30
+			    location   	(2159, 397)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E5DBF65030E"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkView "" @31
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E5DBF720254"
+			client     	@29
+			supplier   	@30
+			line_style 	0)
+		    (object MessView "" @32
+			location   	(1488, 404)
+			line_color 	3342489
+			label      	(object SegLabel @33
+			    Parent_View 	@32
+			    location   	(1488, 266)
+			    quidu      	"5E5DBF720255"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	397
+			    justify    	0
+			    label      	"upload cctv footage"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @34
+			    Parent_View 	@32
+			    location   	(1488, 313)
+			    quidu      	"5E5DBF8000DD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	341
+			    justify    	0
+			    label      	"generate frames"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @35
+			    Parent_View 	@32
+			    location   	(1488, 360)
+			    quidu      	"5E5DBF8B0204"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	522
+			    justify    	0
+			    label      	"Detect Suspicious Activity"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@31
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1428, 404)
+			terminus   	(1548, 404))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5E5DBED5002E"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5E5DBED500B0"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5E5DBED5002F"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5E5DBED50031"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5E5DBED50030"))

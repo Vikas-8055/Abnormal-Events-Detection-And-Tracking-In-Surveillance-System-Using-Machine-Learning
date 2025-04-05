@@ -1,0 +1,277 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5EB5EC720274"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5EB5EC720276"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5EB5EC7E00E9"
+		stereotype 	"Actor")
+	    (object UseCase "Upload Video"
+		quid       	"5EB5EC8400E0")
+	    (object UseCase "Generate Frame"
+		quid       	"5EB5EC8D0270")
+	    (object UseCase "Detect Suspicious Activity Frame"
+		quid       	"5EB5EC9D00EF")
+	    (object Association "$UNNAMED$0"
+		quid       	"5EB5ECB7031C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5EB5ECB80399"
+			supplier   	"Use Case View::Upload Video"
+			quidu      	"5EB5EC8400E0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5EB5ECB8039A"
+			supplier   	"Use Case View::User"
+			quidu      	"5EB5EC7E00E9")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5EB5ECBB00B3"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5EB5ECBC017B"
+			supplier   	"Use Case View::Generate Frame"
+			quidu      	"5EB5EC8D0270"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5EB5ECBC017C"
+			supplier   	"Use Case View::User"
+			quidu      	"5EB5EC7E00E9")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5EB5ECBF0367"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5EB5ECC100D8"
+			supplier   	"Use Case View::Detect Suspicious Activity Frame"
+			quidu      	"5EB5EC9D00EF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5EB5ECC100D9"
+			supplier   	"Use Case View::User"
+			quidu      	"5EB5EC7E00E9"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5EB5EC7202DF"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Upload Video" @1
+			location   	(1568, 160)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1568, 298)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Upload Video")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EB5EC8400E0"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Generate Frame" @2
+			location   	(1568, 496)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1568, 634)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Generate Frame")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EB5EC8D0270"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::User" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(832, 496)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(832, 656)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EB5EC7E00E9"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @4
+			location   	(1167, 339)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EB5ECB7031C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @5
+				Parent_View 	@4
+				location   	(335, -157)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECB80399"
+				client     	@4
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @6
+				Parent_View 	@4
+				location   	(335, -157)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECB8039A"
+				client     	@4
+				supplier   	@3
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @7
+			location   	(1172, 496)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EB5ECBB00B3"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @8
+				Parent_View 	@7
+				location   	(340, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECBC017B"
+				client     	@7
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @9
+				Parent_View 	@7
+				location   	(340, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECBC017C"
+				client     	@7
+				supplier   	@3
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Detect Suspicious Activity Frame" @10
+			location   	(1584, 832)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1584, 970)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Detect Suspicious Activity Frame")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EB5EC9D00EF"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$6" @11
+			location   	(1181, 651)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EB5ECBF0367"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @12
+				Parent_View 	@11
+				location   	(349, 155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECC100D8"
+				client     	@11
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @13
+				Parent_View 	@11
+				location   	(349, 155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EB5ECC100D9"
+				client     	@11
+				supplier   	@3
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5EB5EC720275"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5EB5EC720277"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5EB5EC72028E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5EB5EC720277"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5EB5EC7202DE"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5EB5EC720278"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5EB5EC72027A"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5EB5EC720279"))
